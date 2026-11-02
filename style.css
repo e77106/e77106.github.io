@@ -23,4 +23,5 @@ a{color:var(--accent)}
 .btn.o{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 .badges span{display:inline-block;margin:4px 6px 4px 0;padding:4px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-size:.9rem}
 .note{font-size:.85rem;opacity:.75}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}.gallery img{width:100%;height:auto;display:block}.gallery figcaption{padding:8px 12px;font-size:.85rem}
 footer{max-width:880px;margin:0 auto;padding:20px 16px 40px;font-size:.85rem;opacity:.75;border-top:1px solid var(--line)}
