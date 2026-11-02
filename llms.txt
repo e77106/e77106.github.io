@@ -1,11 +1,18 @@
 # 高雄房仲蕭千萬
 
-> 高雄市的房屋仲介，提供買屋需求配對、賣屋委託與行情諮詢。
+> 蕭翊瑋（蕭千萬），永慶不動產博愛凱璿店區經理，會計背景轉職房仲，房仲年資邁入第13年，服務高雄市住宅買賣與租賃。
 
-## 網站
-- [首頁](https://e77106.github.io/): 服務項目、服務地區與聯絡方式
+## 頁面
+- [首頁](https://e77106.github.io/): 簡介、資歷、服務與常見問題
+- [關於蕭千萬](https://e77106.github.io/about.html): 從會計到房仲的經歷時間線、資格與獎項、服務理念
+- [服務項目](https://e77106.github.io/services.html): 買屋、賣屋、租賃
+- [媒體報導](https://e77106.github.io/media.html): CNEWS 匯流新聞網 2022 年報導與社群影音
+- [聯絡](https://e77106.github.io/contact.html): 電話、LINE、社群
 
-## 社群
-- [Instagram @iwei0222](https://www.instagram.com/iwei0222/): 最新物件與私訊諮詢
-- [Threads @iwei0222](https://www.threads.com/@iwei0222): 物件與市場動態
-- [TikTok @iwei0222](https://www.tiktok.com/@iwei0222): 短影音
+## 外部來源
+- [CNEWS 報導](https://cnews.com.tw/%E6%94%B6%E5%85%A5%E4%B8%89%E7%B4%9A%E8%B7%B3-%E6%B0%B8%E6%85%B6%E4%B8%8D%E5%8B%95%E7%94%A2%E8%95%AD%E7%BF%8A%E7%91%8B%E5%B9%B4%E6%A5%AD%E7%B8%BE%E7%9B%B4%E9%80%BC600%E8%90%AC/): 不做會計師收入三級跳 永慶不動產蕭翊瑋年業績直逼600萬（2022-09-02）
+- [Instagram @iwei0222](https://www.instagram.com/iwei0222/)
+- [YouTube @iwei0222](https://www.youtube.com/@iwei0222)
+- [Threads @iwei0222](https://www.threads.com/@iwei0222)
+- [TikTok @iwei0222](https://www.tiktok.com/@iwei0222)
+- [Facebook @iwei0222](https://www.facebook.com/iwei0222)

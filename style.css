@@ -1,0 +1,26 @@
+
+:root{--bg:#faf7f2;--fg:#222;--accent:#b4472b;--card:#fff;--line:#e6dfd3;--soft:#f3ece0}
+@media (prefers-color-scheme:dark){:root{--bg:#1b1917;--fg:#eee;--accent:#e8845f;--card:#262320;--line:#3a3530;--soft:#2c2723}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.85 system-ui,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+header{border-bottom:1px solid var(--line);background:var(--card)}
+.bar{max-width:880px;margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.1rem}
+nav a{margin-right:14px;text-decoration:none;color:var(--fg);padding:4px 0;border-bottom:2px solid transparent;display:inline-block}
+nav a[aria-current=page],nav a:hover{border-color:var(--accent);color:var(--accent)}
+main{max-width:880px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:1.9rem;margin:0 0 8px;line-height:1.35}
+h2{font-size:1.25rem;margin:38px 0 12px;border-left:4px solid var(--accent);padding-left:10px}
+h3{font-size:1.05rem;margin:0 0 6px}
+.lead{color:var(--accent);font-weight:600;margin:0 0 18px}
+.hero{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin:0 0 8px}
+.hero svg{float:right;width:84px;height:84px;margin:0 0 8px 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+ul{padding-left:1.2em;margin:6px 0}
+a{color:var(--accent)}
+.btn{display:inline-block;margin:6px 8px 6px 0;padding:9px 18px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+.btn.o{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.badges span{display:inline-block;margin:4px 6px 4px 0;padding:4px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-size:.9rem}
+.note{font-size:.85rem;opacity:.75}
+footer{max-width:880px;margin:0 auto;padding:20px 16px 40px;font-size:.85rem;opacity:.75;border-top:1px solid var(--line)}
