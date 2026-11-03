@@ -1,27 +1,160 @@
-
-:root{--bg:#faf7f2;--fg:#222;--accent:#b4472b;--card:#fff;--line:#e6dfd3;--soft:#f3ece0}
-@media (prefers-color-scheme:dark){:root{--bg:#1b1917;--fg:#eee;--accent:#e8845f;--card:#262320;--line:#3a3530;--soft:#2c2723}}
+:root{--ink:#111;--txt:#54595f;--green:#536942;--slate:#585c66;--frame:#545860;--gold:#c9a24a;--red:#e8141c;--white:#fff;color-scheme:light}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.85 system-ui,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
-header{border-bottom:1px solid var(--line);background:var(--card)}
-.bar{max-width:880px;margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between}
-.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.1rem}
-nav a{margin-right:14px;text-decoration:none;color:var(--fg);padding:4px 0;border-bottom:2px solid transparent;display:inline-block}
-nav a[aria-current=page],nav a:hover{border-color:var(--accent);color:var(--accent)}
-main{max-width:880px;margin:0 auto;padding:32px 16px 64px}
-h1{font-size:1.9rem;margin:0 0 8px;line-height:1.35}
-h2{font-size:1.25rem;margin:38px 0 12px;border-left:4px solid var(--accent);padding-left:10px}
-h3{font-size:1.05rem;margin:0 0 6px}
-.lead{color:var(--accent);font-weight:600;margin:0 0 18px}
-.hero{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin:0 0 8px}
-.hero svg{float:right;width:84px;height:84px;margin:0 0 8px 14px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:#eef4f9;color:var(--txt);font:600 18px/1.75 DotGothic16,"Noto Sans TC","Microsoft JhengHei",sans-serif;letter-spacing:1px;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.fixedbg{position:fixed;inset:0;z-index:-1;background:linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),url(images/bg-sky.jpg) center/cover no-repeat}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Noto Sans TC",sans-serif;letter-spacing:1px}
+h2{font-size:30px;font-weight:700;color:var(--green);margin:0 0 18px}
+/* 頂部選單 */
+.top{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,#aaa,#eee 55%,#fff)}
+.bar{max-width:1180px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:96px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#111;font:900 15px/1.25 "Noto Sans TC",sans-serif}
+.logo img{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid #fff}
+.top nav{display:flex;gap:44px;flex:1;justify-content:center}
+.top nav a{font:400 18px/1 "Potta One","Noto Sans TC",sans-serif;color:#000;text-decoration:none;padding:16px 0;border-bottom:1px solid transparent;transition:border-color .3s}
+.top nav a:hover,.top nav a.cur{border-color:#000}
+.social{display:flex;gap:14px;align-items:center}
+.social a{display:flex;color:#000}.social svg{width:20px;height:20px;fill:currentColor}
+.burger{display:none;margin-left:auto;background:none;border:0;padding:8px;cursor:pointer;min-width:44px;min-height:44px}
+.burger i{display:block;height:3px;background:#000;margin:5px 0;border-radius:2px}
+/* 首圖輪播 */
+.hero{position:relative;aspect-ratio:1600/760;overflow:hidden;background:#222}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .8s}
+.slide.on{opacity:1;visibility:visible}
+.slide>img:first-child{width:100%;height:100%;object-fit:cover}
+.s1>img:first-child{object-position:50% 52%}.s3>img:first-child{object-position:50% 45%}
+.frame{position:absolute;inset:3% 14.500%;border:4px solid #fff;pointer-events:none}
+.big{position:absolute;right:17%;bottom:6%;margin:0;color:#fff;font:400 clamp(26px,4.600vw,72px)/1.2 "Potta One","Noto Sans TC",sans-serif;letter-spacing:.08em;text-shadow:0 2px 12px rgba(0,0,0,.65);text-align:right}
+.circle{position:absolute;right:17%;top:5%;width:21%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 4px 18px rgba(0,0,0,.3)}
+.circle img{width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.tag{position:absolute;right:15.500%;top:43%;background:#b4472b;color:#fff;font:400 clamp(13px,1.800vw,28px)/1.3 "Potta One","Noto Sans TC",sans-serif;font-style:normal;padding:.2em .7em;border:3px solid #fff;border-radius:8px;transform:rotate(-8deg)}
+.s2>img:first-child{filter:brightness(.72)}
+.cut{position:absolute;right:15%;bottom:0;height:96%;width:auto}
+.txt{position:absolute;left:19%;top:50%;transform:translateY(-50%);color:#fff}
+.txt .k{margin:0 0 8px;font-size:clamp(14px,1.700vw,26px);color:#f4cf6f}
+.big2{margin:0 0 20px;font:400 clamp(26px,4.400vw,68px)/1.25 "Potta One","Noto Sans TC",sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.txt a{display:inline-block;background:#06c755;color:#fff;text-decoration:none;padding:10px 26px;border-radius:999px;font-size:clamp(14px,1.300vw,18px)}
+.hero button,.carousel button{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:64px;background:none;border:0;color:#fff;font-size:52px;line-height:1;cursor:pointer;text-shadow:0 1px 5px rgba(0,0,0,.7);z-index:3}
+.prev,.cprev{left:6px}.next,.cnext{right:6px}
+/* 關於 */
+.about{position:relative;padding:44px 0 230px}
+.ab{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;align-items:start}
+.ab-t{align-self:center}
+.eyebrow{margin:0 0 6px;font-size:20px}
+.about h1{font-size:45px;font-weight:700;color:#000;margin:0 0 10px;line-height:1.3}
+.who{font:700 20px "Noto Sans TC",sans-serif;color:#000;margin:0 0 10px}
+.line{display:block;width:58px;height:3px;background:#3a93c9}
+.fr{border:5px solid var(--frame);width:100%;background:#fff}
+.ab-c p{color:#111;margin:14px 0}
+.more{color:var(--green);text-decoration:underline;text-underline-offset:4px}
+.peek{position:absolute;left:18%;bottom:0;width:300px}
+/* 服務 */
+.server{background:#fff;text-align:center;padding:36px 0 44px}
+.server p{color:#111;margin:0 0 16px}
+.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:30px 0 26px}
+.gifts svg{width:112px;height:112px;margin:0 auto 10px;display:block}
+.gifts h3{margin:0;color:var(--green);font-size:20px;font-weight:500}
+/* 五心 */
+.five{position:relative;background:var(--slate) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='110'%3E%3Cg fill='%23484c55'%3E%3Cpath d='M30 20 8 40h6v24h32V40h6z'/%3E%3Ccircle cx='110' cy='78' r='3'/%3E%3C/g%3E%3C/svg%3E");color:#fff;padding:44px 0 66px;text-align:center}
+.five:before{content:"";position:absolute;left:50%;top:0;margin-left:-20px;border:20px solid transparent;border-top-color:#fff;border-bottom:0}
+.five .wrap{position:relative}
+.laurel{position:absolute;left:50%;top:-14px;width:120px;margin-left:-60px}
+.five h2{position:relative;color:#fff;margin:6px 0 46px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.five ul{list-style:none;margin:0;padding:0;position:relative}
+.five li{display:grid;grid-template-columns:1fr 1fr;border-bottom:2px dashed #fff;padding:8px 0;color:#fff}
+.five li b{font-weight:600}
+/* 動態 */
+.news{padding:80px 0 60px;text-align:center}
+.ncards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:34px}
+.ncard{position:relative;overflow:hidden;background:#2e2e2e;color:#fff;padding:30px 20px 34px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.ncard h3{margin:0;font-size:23px;font-weight:500;position:relative;z-index:1}
+.sh{width:42%;margin:6px auto -46px;display:block}
+.ncard a{position:relative;display:inline-block;background:rgba(40,40,40,.9);border:1px solid #fff;color:#fff;text-decoration:none;padding:8px 34px;font-size:16px}
+.rib{position:absolute;right:-42px;top:20px;width:150px;background:var(--red);color:#111;font:500 12px/2 sans-serif;transform:rotate(45deg)}
+/* 物件 */
+.pic{padding:50px 0 0;text-align:center}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:30px 0 60px}
+.vids figure{margin:0}.vids figcaption{color:#333;margin-bottom:12px;font-size:17px;min-height:3.500em}
+.yt{position:relative;display:block;aspect-ratio:16/9;background:#000;box-shadow:0 4px 14px rgba(0,0,0,.35);overflow:hidden}
+.yt img{width:100%;height:100%;object-fit:cover}
+.yt b{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:12px;background:#f00}
+.yt b:after{content:"";position:absolute;left:27px;top:13px;border:11px solid transparent;border-left:18px solid #fff;border-right:0}
+.vids iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+.skyline{display:block;width:100%;height:clamp(120px,19vw,300px);background:linear-gradient(rgba(255,255,255,0),rgba(64,74,86,.55))}
+.carousel{position:relative;background:#fff}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.case{position:relative;flex:0 0 25%;scroll-snap-align:start;display:block}
+.case img{width:100%;aspect-ratio:9/16;object-fit:cover}
+.case span{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);white-space:nowrap;background:#e3bd8c;color:#222;padding:6px 26px;border-radius:999px;font:700 18px "Noto Sans TC",sans-serif;letter-spacing:3px}
+/* 聯絡 */
+.contact{padding:60px 0 70px}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ct h2{font-size:34px}
+.ct h3{margin:22px 0 2px;font-size:18px;color:var(--txt);font-weight:500}
+.mono{margin:0;font-size:20px;color:#000}.mono a{text-decoration:none}
+.qr{display:flex;align-items:center;gap:30px;margin-top:26px;flex-wrap:wrap}
+.qr img{width:150px;height:150px;background:#fff;padding:6px}
+.round{display:flex;gap:10px}
+.round a{width:44px;height:44px;border-radius:50%;background:#000;color:#fff;display:flex;align-items:center;justify-content:center}
+.round svg{width:22px;height:22px;fill:currentColor}
+.ct .fr{max-width:440px;justify-self:end}
+/* 藍帶 */
+.band{background:linear-gradient(rgba(14,50,92,.78),rgba(14,50,92,.78)),url(images/bg-sky.jpg) center 80%/cover;color:#fff;padding:38px 0 60px}
+.band h2{color:#ffe46b;font-size:24px}
+.band-in{display:grid;grid-template-columns:1.500fr 1fr;gap:50px}
+.band details{border-bottom:1px solid rgba(255,255,255,.4);padding:8px 0}
+.band summary{cursor:pointer;min-height:32px}.band details p{margin:8px 0 2px;font-weight:400;font-family:"Noto Sans TC",sans-serif;font-size:16px}
+.band .more{color:#ffe46b}
+.md img{width:170px;margin-top:20px;background:rgba(255,255,255,.92);padding:8px;border-radius:6px}
+/* 頁尾 */
+.foot{position:relative;background:linear-gradient(90deg,#fff,#ddd 50%,#aaa);color:#222}
+.wave{display:block;width:100%;height:32px;transform:scaleY(-1);margin-top:-1px}
+.foot-in{max-width:1180px;margin:0 auto;padding:20px 24px 30px;display:grid;grid-template-columns:1fr 1fr 1.300fr;gap:30px;align-items:center}
+.foot-a{text-align:center}.foot-a .fa{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto 8px}
+.foot-a strong{display:block;font:400 30px/1.3 "Potta One","Noto Sans TC",sans-serif;color:#111}
+.foot-a small{letter-spacing:3px;font-size:12px}
+.door{width:150px;height:160px;margin:0 auto;display:block}
+.foot-c p{margin:0 0 8px;font-size:16px}.foot-c .sub a{margin-right:8px}
+.copy{background:#000;color:#ccc;text-align:center;padding:12px;font-size:14px}
+/* 子頁 */
+main{max-width:980px;margin:40px auto;padding:40px 44px 56px;background:rgba(255,255,255,.95);box-shadow:0 2px 14px rgba(0,0,0,.08);font:400 17px/1.85 "Noto Sans TC",sans-serif;color:#333;letter-spacing:.3px}
+main h1{font-size:36px;color:#000;margin:0 0 8px}
+main h2{font-size:24px;margin:36px 0 12px}
+main h3{font-size:18px;margin:0 0 6px;color:#222}
+.lead{color:var(--green);font-weight:700;margin:0 0 18px}
+main a{color:var(--green)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-ul{padding-left:1.2em;margin:6px 0}
-a{color:var(--accent)}
-.btn{display:inline-block;margin:6px 8px 6px 0;padding:9px 18px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
-.btn.o{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.badges span{display:inline-block;margin:4px 6px 4px 0;padding:4px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-size:.9rem}
+.card{background:#fff;border:1px solid #ddd;padding:16px 18px}
+.btn{display:inline-block;margin:6px 8px 6px 0;padding:9px 20px;background:var(--slate);color:#fff!important;text-decoration:none;font-weight:700}
+.btn.o{background:transparent;color:var(--slate)!important;border:1px solid var(--slate)}
+.badges span{display:inline-block;margin:4px 6px 4px 0;padding:4px 12px;background:#f0f2ec;border:1px solid #d8ddd0;font-size:.9rem}
 .note{font-size:.85rem;opacity:.75}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}.gallery img{width:100%;height:auto;display:block}.gallery figcaption{padding:8px 12px;font-size:.85rem}
-footer{max-width:880px;margin:0 auto;padding:20px 16px 40px;font-size:.85rem;opacity:.75;border-top:1px solid var(--line)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}
+.gallery figure{margin:0;border:4px solid var(--frame);background:#fff}.gallery img{width:100%}.gallery figcaption{padding:8px 12px;font-size:.85rem}
+/* 手機 */
+@media (max-width:980px){
+.bar{min-height:72px;padding:6px 16px}.logo img{width:50px;height:50px}
+.burger{display:block}.top .social{display:none}
+.top nav{display:none;position:absolute;left:0;right:0;top:100%;background:#eee;flex-direction:column;gap:0;padding:6px 16px;box-shadow:0 8px 12px rgba(0,0,0,.15)}
+.top.open nav{display:flex}.top nav a{padding:14px 0;border-bottom:1px solid #ccc}
+html{scroll-padding-top:76px}
+.hero{aspect-ratio:4/5}
+.frame{inset:2.500% 4%}
+.big{right:7%;bottom:5%;font-size:9vw}.circle{right:8%;top:5%;width:32%}.tag{right:6%;top:30%;font-size:4vw}
+.s1>img:first-child{object-position:30% 50%}
+.cut{right:-6%;bottom:0;height:68%}.txt{left:9%;top:7%;transform:none}.big2{font-size:9vw}.txt .k{font-size:4.300vw}
+.ab{grid-template-columns:1fr}.about{padding-bottom:150px}.peek{left:10%;width:190px}
+.about h1{font-size:36px}
+.gifts{gap:10px}.gifts svg{width:72px;height:72px}.gifts h3{font-size:15px;letter-spacing:0}
+.five li{grid-template-columns:1.800fr 1fr;font-size:16px}
+.ncards,.vids{grid-template-columns:1fr;gap:20px}.vids figcaption{min-height:0}
+.sh{width:120px}
+.case{flex-basis:70%}
+.ct,.band-in{grid-template-columns:1fr}.ct .fr{justify-self:center}
+.foot-in{grid-template-columns:1fr;text-align:center}.foot-c .social{justify-content:center}.door{display:none}
+main{margin:0;padding:28px 16px 44px}main h1{font-size:28px}
+}
