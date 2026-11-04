@@ -8,6 +8,10 @@
 - [服務項目](https://e77106.github.io/services.html): 買屋、賣屋、租賃
 - [買賣流程](https://e77106.github.io/guide.html): 高雄買屋與賣屋的一般流程與常見問題
 - [媒體報導](https://e77106.github.io/media.html): CNEWS 匯流新聞網 2022 年報導與社群影音
+- [最新動態](https://e77106.github.io/news.html): 短影音動態
+- [物件介紹](https://e77106.github.io/listings.html): 物件影片與成交紀錄
+- [獲獎紀錄](https://e77106.github.io/awards.html): 頒獎、獎帶與上台照片
+- [家庭日常](https://e77106.github.io/family.html): 工作之外的家庭生活
 - [聯絡](https://e77106.github.io/contact.html): 電話、LINE、社群
 
 ## 外部來源
