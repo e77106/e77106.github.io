@@ -265,3 +265,16 @@ html{scroll-padding-top:76px}
 main{margin:0;padding:28px 16px 44px}main h1{font-size:28px}
 }
 @media (max-width:560px){.agrid,.why{grid-template-columns:1fr}}
+/* 關於／如何行銷 */
+.cred{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;margin:10px 0 14px}
+.cred figure{margin:0;border:1px solid #ddd;background:#fff;padding:10px}
+.cred img{width:100%;height:auto;display:block}
+.cred figcaption{font-size:15px;line-height:1.7;padding:10px 4px 2px;color:#333}
+.mk{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:26px;align-items:start;margin:12px 0 26px}
+.mk video,.mkg video{width:100%;height:auto;display:block;background:#000}
+.mkg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0 26px}
+.mkg figure{margin:0}.mkg img{width:100%;height:auto;display:block}
+.top nav{gap:20px}
+@media (max-width:980px){.cred,.mkg{grid-template-columns:1fr}.mk{grid-template-columns:1fr}.mkv{max-width:300px}.mkg figure{max-width:320px}}
+.top nav a{white-space:nowrap}
+@media (min-width:981px) and (max-width:1380px){.top nav{gap:14px}.top nav a{font-size:15px}.bar{gap:12px}.logo img{width:70px;height:70px}}
