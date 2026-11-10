@@ -3,7 +3,7 @@
  * 事件：line_click、phone_call_click（參數 cta_position 標示是哪個按鈕）、tax_calc（稅金試算）
  */
 (function () {
-  var GA_ID = '';
+  var GA_ID = 'G-HR09SKFJJB';
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
   if (GA_ID) {
