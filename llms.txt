@@ -7,6 +7,8 @@
 - [關於蕭千萬](https://e77106.github.io/about.html): 從會計到房仲的經歷時間線、資格與獎項、服務理念
 - [服務項目](https://e77106.github.io/services.html): 買屋、賣屋、租賃
 - [賣房稅金試算](https://e77106.github.io/tax.html): 房地合一稅 2.0 計算器、稅率表與賣房要繳哪些稅
+- [屋主委託服務](https://e77106.github.io/owner-service.html): 廣告、照片、屋況美化、現場廣告與 DM、定期回報
+- [凱璿的優勢](https://e77106.github.io/team.html): 永慶不動產博愛凱璿店九項優勢
 - [如何行銷](https://e77106.github.io/marketing.html): 開發DM、派報、屋況整理、拜地基主等賣屋行銷做法與影片
 - [買賣流程](https://e77106.github.io/guide.html): 高雄買屋與賣屋的一般流程與常見問題
 - [媒體報導](https://e77106.github.io/media.html): CNEWS 匯流新聞網 2022 年報導與社群影音

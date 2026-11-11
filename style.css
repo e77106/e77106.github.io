@@ -312,3 +312,20 @@ main{margin:0;padding:28px 16px 44px}main h1{font-size:28px}
 .past h2{margin-top:0}
 .plist{padding-left:20px;margin:0}.plist li{margin:7px 0}.plist span{color:#777;font-size:14px;margin-left:6px}
 .xcase .nt{margin:auto 0}
+/* 簡報素材：屋主委託服務、凱璿優勢、年度榮譽 */
+.sfg{display:grid;gap:14px;margin:12px 0 26px}
+.sfg.c4{grid-template-columns:repeat(4,1fr)}
+.sfg.c3{grid-template-columns:repeat(3,1fr)}
+.sfg.c1{grid-template-columns:minmax(0,420px)}
+.sf{margin:0;background:#fff;border:1px solid #e0e0e0;padding:6px}
+.sf img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;background:#f3f3f3}
+.sf figcaption{font-size:14px;line-height:1.5;color:#444;padding:8px 4px 4px}
+.sfg.c1 .sf img,.honors .sf img{aspect-ratio:auto}
+.honors{margin:0 auto 34px;text-align:left}
+.honors .hh{margin-top:10px}
+.tl{list-style:none;margin:0 0 18px;padding:0;border-left:3px solid var(--green)}
+.tl li{display:flex;gap:16px;padding:6px 0 6px 16px;margin:0;position:relative}
+.tl li:before{content:"";position:absolute;left:-8px;top:15px;width:13px;height:13px;border-radius:50%;background:var(--green)}
+.tl b{flex:0 0 110px;color:var(--green)}
+@media (max-width:980px){.sfg.c4{grid-template-columns:repeat(2,1fr)}.sfg.c3{grid-template-columns:repeat(2,1fr)}.tl b{flex-basis:92px}}
+@media (max-width:560px){.sfg.c3{grid-template-columns:1fr 1fr}}
